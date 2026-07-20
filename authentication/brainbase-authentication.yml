@@ -1,0 +1,14 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brainbase-openapi-original.json
+summary:
+  types:
+  - http
+schemes:
+- name: bearer
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: A short description for security scheme
+  sources:
+  - openapi/brainbase-openapi-original.json
