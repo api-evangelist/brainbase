@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: API v1 ApiContract API
+  version: '0.1'
+  description: ApiContractController endpoints
+tags:
+- name: ApiContract
+  description: ApiContractController endpoints
+paths:
+  /api/user/contracts:
+    get:
+      tags:
+      - ApiContract
+      summary: Get all contracts associated with the user and perform filter and search via query parameter.
+      operationId: ApiContractController__userAssociatedContracts
+      parameters:
+      - name: maxRows
+        in: query
+        description: Max count of rows
+        required: false
+        schema:
+          type: integer
+      - name: page
+        in: query
+        description: Page number
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Runtime error loged.
+      security:
+      - bearer: []
+components:
+  securitySchemes:
+    bearer:
+      description: A short description for security scheme
+      scheme: bearer
+      bearerFormat: JWT
+      type: http

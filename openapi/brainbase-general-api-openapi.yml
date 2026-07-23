@@ -1,0 +1,151 @@
+openapi: 3.0.0
+info:
+  title: API v1 ApiContract General API
+  version: '0.1'
+  description: ApiContractController endpoints
+tags:
+- name: General
+  description: GeneralController endpoints
+paths:
+  /api/report/runtime/error:
+    post:
+      tags:
+      - General
+      summary: Report runtime error
+      operationId: GeneralController__reportRuntimeError
+      parameters:
+      - name: user-id
+        in: query
+        description: Current user id
+        required: true
+        schema:
+          type: string
+      - name: agent
+        in: query
+        description: Agent
+        required: true
+        schema:
+          type: string
+      - name: url
+        in: query
+        description: Current url address
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Runtime error loged.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RuntimeErrorReportResponse'
+  /api/get/information/general:
+    post:
+      tags:
+      - General
+      summary: Get general information
+      operationId: GeneralController__getGeneralApplicationInformation
+      responses:
+        '200':
+          description: Return general application information.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeneralApplicationInformationResponse'
+  /api/get/information/git:
+    get:
+      tags:
+      - General
+      summary: Get git information
+      operationId: GeneralController__getGitInformation
+      responses:
+        '200':
+          description: Return Git information.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GitInformationResponse'
+components:
+  schemas:
+    GeneralApplicationInformationResponse:
+      properties:
+        featuresConfig:
+          $ref: '#/components/schemas/FeatureConfigResponse'
+      type: object
+    RuntimeErrorReportResponse:
+      properties:
+        res:
+          type: boolean
+      type: object
+    GitInformationResponse:
+      properties:
+        branch:
+          type: string
+        path:
+          type: string
+        hash:
+          type: string
+        date:
+          type: string
+      type: object
+    FeatureConfigResponse:
+      properties:
+        version:
+          type: integer
+          format: int64
+        rollouts:
+          type: array
+          items:
+            type: object
+        typedAudiences:
+          type: array
+          items:
+            type: object
+        anonymizeIP:
+          type: boolean
+        projectId:
+          type: integer
+          format: int64
+        variables:
+          type: array
+          items:
+            type: object
+        featureFlags:
+          type: array
+          items:
+            type: object
+        experiments:
+          type: array
+          items:
+            type: object
+        audiences:
+          type: array
+          items:
+            type: object
+        groups:
+          type: array
+          items:
+            type: object
+        attributes:
+          type: array
+          items:
+            type: object
+        botFiltering:
+          type: boolean
+        accountId:
+          type: integer
+          format: int64
+        events:
+          type: array
+          items:
+            type: object
+        revision:
+          type: integer
+          format: int64
+      type: object
+  securitySchemes:
+    bearer:
+      description: A short description for security scheme
+      scheme: bearer
+      bearerFormat: JWT
+      type: http
