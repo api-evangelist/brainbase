@@ -1,0 +1,16 @@
+{
+  "provider": "brainbase",
+  "sources": [
+    "brainbase-apicontract-api-openapi.yml",
+    "brainbase-general-api-openapi.yml"
+  ],
+  "outputs": [
+    "brainbase-apicontract-api-openapi.yml",
+    "brainbase-general-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

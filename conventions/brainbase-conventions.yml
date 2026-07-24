@@ -1,0 +1,44 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brainbase-openapi-original.json
+notes: >-
+  Cross-cutting request/response semantics derived from the Brainbase API v1 OpenAPI.
+  The public spec is minimal (4 operations); conventions below reflect only what the
+  spec evidences. No idempotency contract is documented, so no Idempotency pointer is
+  emitted.
+authentication:
+  style: http-bearer
+  format: JWT
+  header: Authorization
+  detail: authentication/brainbase-authentication.yml
+pagination:
+  style: page-number
+  params:
+  - name: page
+    in: query
+    description: Page number
+  - name: maxRows
+    in: query
+    description: Max count of rows
+  evidence: GET /api/user/contracts declares page + maxRows query parameters
+idempotency:
+  supported: false
+  detail: No Idempotency-Key header or idempotent-retry contract is documented in the spec.
+versioning:
+  scheme: uri-path
+  current: v1
+  spec_version: '0.1'
+  evidence: paths under /api/*, spec info.version 0.1, docs titled "API v1"
+error_envelope:
+  format: custom
+  rfc9457: false
+  detail: >-
+    Runtime-error reporting returns {res: boolean} (RuntimeErrorReportResponse).
+    The spec declares only 200 responses; no 4xx/5xx problem schemas are published.
+request_tracing:
+  detail: >-
+    The runtime-error-report operation accepts user-id, agent and url query
+    parameters for client-side error context; no standard request-id header is
+    documented.
+rate_limiting:
+  documented: false

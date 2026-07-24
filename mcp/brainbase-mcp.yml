@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/brainbase-openapi-original.json
+notes: >-
+  No official hosted/remote Brainbase MCP server was found (npm @modelcontextprotocol,
+  MCP registries, docs). This is a DERIVED candidate tool list — one tool per OpenAPI
+  operation — provided as a starting point, not a published server.
+server:
+  name: brainbase
+  transport: http
+tools:
+- name: list_user_contracts
+  description: Get all contracts associated with the user, with filter/search, pagination.
+  source_operation: openapi/brainbase-openapi-original.json#ApiContractController__userAssociatedContracts
+- name: get_general_information
+  description: Get general application information (feature configuration).
+  source_operation: openapi/brainbase-openapi-original.json#GeneralController__getGeneralApplicationInformation
+- name: get_git_information
+  description: Get build/git information (branch, hash, date, path).
+  source_operation: openapi/brainbase-openapi-original.json#GeneralController__getGitInformation
+- name: report_runtime_error
+  description: Report a client-side runtime error with user, agent and url context.
+  source_operation: openapi/brainbase-openapi-original.json#GeneralController__reportRuntimeError

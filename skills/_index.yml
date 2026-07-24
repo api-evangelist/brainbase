@@ -1,0 +1,8 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/brainbase-openapi-original.json
+skills:
+- file: brainbase-list-contracts.md
+  name: List Brainbase licensing contracts
+  api: openapi/brainbase-openapi-original.json
+  operations: [ApiContractController__userAssociatedContracts]

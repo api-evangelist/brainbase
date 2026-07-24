@@ -1,8 +1,33 @@
 aid: brainbase
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brainbase.png
 name: Brainbase
-description: 'Brainbase is a company surfaced as a portfolio company of bessemer-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: cloud. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Brainbase is a modern, end-to-end brand-licensing and intellectual-property
+  management platform used by global licensing businesses to run their licensing,
+  partnership and sponsorship programs from a single system of record. The product
+  covers the full IP lifecycle — trademarks, patents, copyrights, licences, products
+  and royalties — consolidating contract management, royalty calculation, sales-data
+  reporting and contract-compliance workflows for brand owners, licensors and their
+  partners. Founded in 2016 in Los Angeles by Nate Cavanaugh, Brainbase raised an
+  $8M Series A in 2020 led by Bessemer Venture Partners and Nosara Capital, and was
+  acquired by PYXiS Software Group (a division of Jonas Software) in 2022. The public
+  marketing apex (www.brainbase.com) no longer resolves post-acquisition; the SaaS
+  application remains live at app.brainbase.com and exposes a small public REST API
+  (bearer/JWT) at api.brainbase.com with an auto-generated OpenAPI document at
+  api.brainbase.com/docs. This profile was surfaced from the Bessemer Venture Partners
+  portfolio and enriched by the API Evangelist pipeline from the live API surface.
 url: https://raw.githubusercontent.com/api-evangelist/brainbase/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +35,78 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: pyxis-software-group
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cloud
-apis: []
+- Intellectual Property
+- Brand Licensing
+- Licensing Management
+- Royalties
+- Contracts
+- Trademarks
+- SaaS
+apis:
+- aid: brainbase:brainbase-apicontract-api
+  name: Brainbase ApiContract API
+  description: ApiContractController endpoints
+  humanURL: https://api.brainbase.com/docs
+  baseURL: https://api.brainbase.com
+  tags:
+  - ApiContract
+  properties:
+  - type: OpenAPI
+    url: openapi/brainbase-apicontract-api-openapi.yml
+  - type: APIReference
+    url: https://api.brainbase.com/docs
+- aid: brainbase:brainbase-general-api
+  name: Brainbase General API
+  description: GeneralController endpoints
+  humanURL: https://api.brainbase.com/docs
+  baseURL: https://api.brainbase.com
+  tags:
+  - General
+  properties:
+  - type: OpenAPI
+    url: openapi/brainbase-general-api-openapi.yml
+  - type: APIReference
+    url: https://api.brainbase.com/docs
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/brainbase-domain-security.yml
+- type: Conventions
+  url: conventions/brainbase-conventions.yml
+- type: MCPServer
+  url: mcp/brainbase-mcp.yml
+- type: LLMsTxt
+  url: llms/brainbase-llms.txt
+- type: Overlay
+  url: overlays/brainbase-openapi-overlay.yaml
+- type: DataModel
+  url: data-model/brainbase-data-model.yml
+- type: WellKnown
+  url: well-known/brainbase-well-known.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: AgenticAccess
+  url: agentic-access/brainbase-agentic-access.yml
+- type: Authentication
+  url: authentication/brainbase-authentication.yml
 - type: Website
   url: https://www.brainbase.com/
+- type: Login
+  url: https://app.brainbase.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

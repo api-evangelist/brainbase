@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brainbase-openapi-original.json
+notes: >-
+  Entity graph derived from the Brainbase API v1 OpenAPI components.schemas. The
+  public spec exposes response/config objects and two domain enums; only one $ref
+  relationship is present. The core licensing domain (contracts, licences, royalties)
+  is referenced by the ApiContract endpoint but not modeled as schemas in this
+  minimal public spec.
+entities:
+- name: GeneralApplicationInformationResponse
+  kind: response
+- name: FeatureConfigResponse
+  kind: config
+- name: RuntimeErrorReportResponse
+  kind: response
+- name: GitInformationResponse
+  kind: response
+relationships:
+- from: GeneralApplicationInformationResponse
+  to: FeatureConfigResponse
+  type: has_one
+  via: featuresConfig
+enums:
+- name: CategoryTypeNamesEnum
+  values: [Patent, Copyright, Trademark, Royalty, Product, Licence]
+  domain: intellectual-property category
+- name: DimensionSetTypeEnum
+  values: [NONE, PROPERTIES]

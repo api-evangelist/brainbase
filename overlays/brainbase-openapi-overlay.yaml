@@ -1,0 +1,24 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Brainbase API v1
+  version: 1.0.0
+extends: openapi/brainbase-openapi-original.json
+actions:
+- target: $.info
+  update:
+    description: >-
+      Brainbase API v1 — the public REST surface (bearer/JWT) of the Brainbase
+      brand-licensing and intellectual-property management platform. Retrieve
+      user-associated licensing contracts with filter, search and pagination,
+      read general application and git build information, and report client-side
+      runtime errors.
+    x-apievangelist-enriched: true
+    x-apievangelist-source: https://api.brainbase.com/docs
+- target: $
+  update:
+    servers:
+    - url: https://api.brainbase.com
+      description: Production
+- target: $.components.securitySchemes.bearer
+  update:
+    description: HTTP bearer authentication using a JWT access token in the Authorization header.
