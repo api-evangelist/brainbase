@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "131be008-8737-4cf5-b7e3-5e30d1bd82c3",
+      "name": "ApiContract",
+      "description": {
+        "content": "ApiContractController endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cd138db4-641a-48cf-9d7b-b2d97c57c8fe",
+          "name": "Get all contracts associated with the user and perform filter and search via query parameter.",
+          "request": {
+            "name": "Get all contracts associated with the user and perform filter and search via query parameter.",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "user",
+                "contracts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxRows",
+                  "value": "<integer>",
+                  "description": "Max count of rows"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "Page number"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4e8e62f2-3b7e-459f-8e92-967ceef37032",
+              "name": "Runtime error loged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "user",
+                    "contracts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxRows",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "f71a0b88-6f2a-4777-8cf2-950852a1dd68",
+    "name": "API v1 ApiContract API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "ApiContractController endpoints",
+      "type": "text/plain"
+    }
+  }
+}

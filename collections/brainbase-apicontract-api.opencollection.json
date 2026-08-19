@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "API v1 ApiContract API",
+    "version": "0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ApiContract",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all contracts associated with the user and perform filter and search via query parameter.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/user/contracts",
+            "params": [
+              {
+                "name": "maxRows",
+                "value": "",
+                "type": "query",
+                "description": "Max count of rows"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query",
+                "description": "Page number"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all contracts associated with the user and perform filter and search via query parameter."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

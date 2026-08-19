@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "API v1 ApiContract General API",
+    "version": "0.1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "General",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Report runtime error",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/report/runtime/error",
+            "params": [
+              {
+                "name": "user-id",
+                "value": "",
+                "type": "query",
+                "description": "Current user id"
+              },
+              {
+                "name": "agent",
+                "value": "",
+                "type": "query",
+                "description": "Agent"
+              },
+              {
+                "name": "url",
+                "value": "",
+                "type": "query",
+                "description": "Current url address"
+              }
+            ]
+          },
+          "docs": "Report runtime error"
+        },
+        {
+          "info": {
+            "name": "Get general information",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/get/information/general"
+          },
+          "docs": "Get general information"
+        },
+        {
+          "info": {
+            "name": "Get git information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/get/information/git"
+          },
+          "docs": "Get git information"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

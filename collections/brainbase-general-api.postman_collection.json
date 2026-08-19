@@ -1,0 +1,283 @@
+{
+  "item": [
+    {
+      "id": "7470a9bf-b224-4364-a11f-7c43d03859a7",
+      "name": "General",
+      "description": {
+        "content": "GeneralController endpoints",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "978eb901-002a-4c06-b5be-4527201e3a02",
+          "name": "Report runtime error",
+          "request": {
+            "name": "Report runtime error",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "report",
+                "runtime",
+                "error"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "user-id",
+                  "value": "<string>",
+                  "description": "(Required) Current user id"
+                },
+                {
+                  "disabled": false,
+                  "key": "agent",
+                  "value": "<string>",
+                  "description": "(Required) Agent"
+                },
+                {
+                  "disabled": false,
+                  "key": "url",
+                  "value": "<string>",
+                  "description": "(Required) Current url address"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f561f78-509e-4623-aacc-8c753d7e169c",
+              "name": "Runtime error loged.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "report",
+                    "runtime",
+                    "error"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "user-id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "agent",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "url",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"res\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7b12401-d5bf-4f87-9796-d437f9fff912",
+          "name": "Get general information",
+          "request": {
+            "name": "Get general information",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get",
+                "information",
+                "general"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4bfc7131-5f7f-46e8-9d31-045208d513eb",
+              "name": "Return general application information.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get",
+                    "information",
+                    "general"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"featuresConfig\": {\n    \"version\": 8272,\n    \"anonymizeIP\": false,\n    \"projectId\": 7572,\n    \"botFiltering\": false,\n    \"accountId\": 246,\n    \"revision\": 5060\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e625dcdb-a776-4475-b778-fa6b51a3b58d",
+          "name": "Get git information",
+          "request": {
+            "name": "Get git information",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "get",
+                "information",
+                "git"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "26559a25-6192-4c54-97ec-b684e3676770",
+              "name": "Return Git information.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "get",
+                    "information",
+                    "git"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"branch\": \"string\",\n  \"path\": \"string\",\n  \"hash\": \"string\",\n  \"date\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d2dded9d-edf1-4736-ae82-5e23d5d18d09",
+    "name": "API v1 ApiContract General API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "ApiContractController endpoints",
+      "type": "text/plain"
+    }
+  }
+}
