@@ -49,6 +49,16 @@ tags:
 - Royalties
 - Contracts
 - Trademarks
+- Software-as-a-Service
+tags_raw:
+- Company
+- Cloud
+- Intellectual Property
+- Brand Licensing
+- Licensing Management
+- Royalties
+- Contracts
+- Trademarks
 - SaaS
 apis:
 - aid: brainbase:brainbase-apicontract-api
@@ -68,7 +78,8 @@ apis:
   description: GeneralController endpoints
   humanURL: https://api.brainbase.com/docs
   baseURL: https://api.brainbase.com
-  tags:
+  tags: []
+  tags_raw:
   - General
   properties:
   - type: OpenAPI
