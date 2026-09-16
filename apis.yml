@@ -80,6 +80,8 @@ apis:
   humanURL: https://api.brainbase.com/docs
   baseURL: https://api.brainbase.com
   tags:
+  - API Contract
+  tags_raw:
   - ApiContract
   properties:
   - type: OpenAPI
