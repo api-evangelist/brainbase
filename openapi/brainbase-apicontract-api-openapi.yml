@@ -1,6 +1,6 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: API v1 ApiContract API
+  title: v1 API Contract API
   version: '0.1'
   description: ApiContractController endpoints
 tags:
@@ -11,7 +11,7 @@ paths:
     get:
       tags:
       - ApiContract
-      summary: Get all contracts associated with the user and perform filter and search via query parameter.
+      summary: Get all contracts associated with the user and perform filter and search via…
       operationId: ApiContractController__userAssociatedContracts
       parameters:
       - name: maxRows
