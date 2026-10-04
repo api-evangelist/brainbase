@@ -67,11 +67,6 @@ paths:
                 $ref: '#/components/schemas/GitInformationResponse'
 components:
   schemas:
-    GeneralApplicationInformationResponse:
-      properties:
-        featuresConfig:
-          $ref: '#/components/schemas/FeatureConfigResponse'
-      type: object
     FeatureConfigResponse:
       properties:
         version:
@@ -127,6 +122,11 @@ components:
           type: integer
           format: int64
       type: object
+    RuntimeErrorReportResponse:
+      properties:
+        res:
+          type: boolean
+      type: object
     GitInformationResponse:
       properties:
         branch:
@@ -138,10 +138,10 @@ components:
         date:
           type: string
       type: object
-    RuntimeErrorReportResponse:
+    GeneralApplicationInformationResponse:
       properties:
-        res:
-          type: boolean
+        featuresConfig:
+          $ref: '#/components/schemas/FeatureConfigResponse'
       type: object
   securitySchemes:
     bearer:
