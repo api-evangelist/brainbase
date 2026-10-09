@@ -1,18 +1,18 @@
-generated: '2026-07-18'
+generated: '2026-09-23'
 method: generated
-source: openapi/brainbase-openapi-original.json
+source: openapi/brainbase-apicontract-api-openapi.yml, openapi/brainbase-general-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 4
   by_action_class:
-    connected: 2
-    acting: 2
+    connected: 3
+    acting: 1
   by_consequence:
-    read: 2
-    safety-critical: 2
-  human_in_the_loop_required: 2
+    read: 3
+    safety-critical: 1
+  human_in_the_loop_required: 1
 operations:
 - path: /api/user/contracts
   method: get
@@ -44,18 +44,12 @@ operations:
   method: post
   operationId: GeneralController__getGeneralApplicationInformation
   x-agentic-access:
-    action-class: acting
-    consequence: safety-critical
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 120
-      exchange: true
-      purpose-required: true
-      proof-of-possession: true
-    escalation:
-      human-in-the-loop: required
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /api/get/information/git
   method: get
   operationId: GeneralController__getGitInformation
