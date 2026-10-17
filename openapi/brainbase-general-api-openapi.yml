@@ -122,11 +122,6 @@ components:
           type: integer
           format: int64
       type: object
-    RuntimeErrorReportResponse:
-      properties:
-        res:
-          type: boolean
-      type: object
     GitInformationResponse:
       properties:
         branch:
@@ -142,6 +137,11 @@ components:
       properties:
         featuresConfig:
           $ref: '#/components/schemas/FeatureConfigResponse'
+      type: object
+    RuntimeErrorReportResponse:
+      properties:
+        res:
+          type: boolean
       type: object
   securitySchemes:
     bearer:
