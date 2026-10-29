@@ -64,6 +64,75 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Brainbase is a company surfaced as a portfolio company of bessemer-venture-partners and added to the API Evangelist network as a stub for enrichment. Sector: cloud. This profile is a lead awaiting the enrichment pipeline.
+> **Acquired or rebranded.** This company was acquired, merged or renamed. Its API, if it still exists, is offered under another name. This profile is kept as a historical record and is not maintained or rated.
 
-Backed by: bessemer-venture-partners — https://www.brainbase.com/
+Brainbase is a modern, end-to-end brand-licensing and intellectual-property management platform used by global licensing businesses to run their licensing, partnership and sponsorship programs from a single system of record. The product covers the full IP lifecycle — trademarks, patents, copyrights, licences, products and royalties — consolidating contract management, royalty calculation, sales-data reporting and contract-compliance workflows for brand owners, licensors and their partners. Founded in 2016 in Los Angeles by Nate Cavanaugh, Brainbase raised an $8M Series A in 2020 led by Bessemer Venture Partners and Nosara Capital, and was acquired by PYXiS Software Group (a division of Jonas Software) in 2022. The public marketing apex (www.brainbase.com) no longer resolves post-acquisition; the SaaS application remains live at app.brainbase.com and exposes a small public REST API (bearer/JWT) at api.brainbase.com with an auto-generated OpenAPI document at api.brainbase.com/docs. This profile was surfaced from the Bessemer Venture Partners portfolio and enriched by the API Evangelist pipeline from the live API surface.
+
+**Areas:** Company · Cloud · Intellectual Property · Brand Licensing · Licensing Management · Royalties · Contracts · Trademarks · Software-as-a-Service
+
+## Brainbase on APIs.io (historical record)
+
+Everything profiled for Brainbase is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/brainbase/](https://apis.io/providers/brainbase/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Brainbase ApiContract API](https://apis.io/apis/brainbase/brainbase-apicontract-api/) — ApiContractController endpoints
+- [Brainbase General API](https://apis.io/apis/brainbase/brainbase-general-api/) — GeneralController endpoints
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [brainbase](https://apis.io/servers/brainbase/brainbase/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Brainbase Agentic Access](https://apis.io/agentic-access/brainbase/brainbase-agentic-access/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [API v1 ApiContract API](https://apis.io/collections/brainbase/open-brainbase-apicontract-api/)
+- [API v1 ApiContract General API](https://apis.io/collections/brainbase/open-brainbase-general-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Brainbase Openapi Overlay](https://apis.io/overlays/brainbase/brainbase-openapi-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Brainbase Authentication](https://apis.io/security/brainbase/brainbase-authentication/)
+- [Brainbase Domain Security](https://apis.io/security/brainbase/brainbase-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.brainbase.com/)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as acquired or rebranded, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Brainbase: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/brainbase/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
